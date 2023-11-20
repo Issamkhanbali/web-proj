@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <script>
+        const handleClick = () => {
+            document.querySelector('.dropDown').classList.toggle('visible')
+        }
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100dvh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .visible{
+            display: flex !important;
+        }
+       
+
+        .profile-pic {
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin:auto;
+            width: 100px;
+            height: auto;
+            border: 5px solid white;
+            filter: grayscale();
+            transition-duration: 500ms;
+        }
+        .profile-pic:hover{
+            filter: grayscale(0);
+            scale: 1.2;
+        }
+
+        .cv-button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        .laptopImage{
+            max-height: 200px;
+            width: 100dvw;
+            object-fit: cover;
+        }
+
+        .social-links a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .profileArticle{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: fit-content;
+            margin: -50px auto 10px auto;
+            
+        }
+        .name{
+            display: block;
+            font-size:32px
+        }
+        button{
+            border-radius: 11px;
+            transition-duration: 500ms;
+            font-size: 12px !important;
+            min-width:60px;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            height: fit-content;
+            padding: 5px 0px;
+            color: white;
+            border: transparent;
+            background-color: #438EFF;
+        }
+        button:hover{
+            filter:brightness(.8);
+            transform: translateY(-8px);
+        }
+        .buttonGroup{
+            display: flex;
+            justify-content: center;
+            gap:10px;
+            align-items: start;
+            height: fit-content;
+        }
+        .dropDown{
+            display:none;
+            justify-content: start;
+            flex-direction: column;
+            width: 150px;
+            color:white;
+            border-radius: 11px;
+            margin: auto;
+            font-size:11px;
+            background-color: #438Eff;
+        }
+
+        .dropdownItem{
+            padding: 16px 10px;
+            transition-duration: 300ms;
+        }
+        .dropdownItem:hover{
+            background-color: #ffffff66;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row" id="header">
+        <div id="dropdown-menu">
+            <span><i class="ico burger-ico"></i>MENU</span>
+            <div class="dropdown-content">
+                <ul>
+                    <a href="profile_page.html">
+                        <li><i class="ico ico-l user-ico"></i> Contact</li>
+                    </a>
+                    <a href="myCV.html">
+                        <li><i class="ico ico-l wallet-ico"></i>CV</li>
+                    </a>
+                    <a href="main_page.html">
+                        <li><i class="ico ico-l gallery-ico"></i>Gallery</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img class="laptopImage" src="../images/LaptopImage.jpg"/>
+
+        <article class="profileArticle">
+            <img class="profile-pic" src="../images/linkedin_photo.jpg" alt="Profile Picture">
+            <div class="name"><b>Issam Hanbali</b></div>
+            <div>Big Data Developer</div>
+
+            <section class="buttonGroup">
+                <!-- <button  onclick="window.location.href='./myCV.html'" class="cv-button">My-Cv</button> -->
+                <div   class="cv-button">71-677 770</div>
+                <!-- <div  class="dropDown">
+                    <div class="dropdownItem" onclick="window.location.href=`https:\/\/www.linkedin.com/in/issam-hanbali-5826273b/`">LinkedIn</div>
+                    <div class="dropdownItem" onclick="window.location.href=`https:\/\/instagram.com/issam5hanbali?igshid=OGQ5ZDc2ODk2ZA==`">Instagram</div>
+                </div> -->
+                <div>
+                    <button onclick="handleClick()" class="cv-button">Socials</button>
+
+                </div>
+            </section>
+        </article>
+        <div  class="dropDown">
+            <div class="dropdownItem" onclick="window.location.href=`https:\/\/www.linkedin.com/in/issam-hanbali-5826273b/`">LinkedIn</div>
+            <div class="dropdownItem" onclick="window.location.href=`https:\/\/instagram.com/issam5hanbali?igshid=OGQ5ZDc2ODk2ZA==`">Instagram</div>
+        </div>
+    </div>
+</body>
+
+</html>
